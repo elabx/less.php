@@ -1,0 +1,22 @@
+// https://github.com/wikimedia/less.php/issues/136
+:not(.active) {
+	display: none;
+}
+:not(.a, .b) {
+	display: block;
+}
+.form-small:is(.framework-input, .framework-search, select:not([multiple]):not([size])) {
+	height: 42px;
+}
+a:is(.b, :is(.c), :has(div)) {
+	color: red;
+}
+:where(.x, .y) {
+	margin: 0;
+}
+:has(div > .child, span + .sibling) {
+	border: 1px solid;
+}
+:is([type="text"], .input-field) {
+	padding: 4px;
+}
